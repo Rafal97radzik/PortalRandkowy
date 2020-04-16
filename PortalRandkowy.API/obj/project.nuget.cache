@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "mih8lw2i8mHU0LD5/T/N9WQDQeTAuIdLLjWwM+6BKjLgrMN3bG8Cy2//L3YJ3P7/vlIAkNCIxSB1wg4PUGQuhg==",
+  "dgSpecHash": "f8fPwL7VPhZCUjxQXrsPhyKMsGBS6mkP0KVBRVf5Ta//gaUaTRZQegmLDfIDP4bCUbEPgbfL0iDrbPwLAjF2GA==",
   "success": true,
   "projectFilePath": "D:\\Games\\angular\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.entityframeworkcore\\3.0.3\\microsoft.entityframeworkcore.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.0.3\\microsoft.entityframeworkcore.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.0.3\\microsoft.entityframeworkcore.analyzers.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.0.3\\microsoft.extensions.caching.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.0.3\\microsoft.extensions.caching.memory.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.configuration\\3.0.3\\microsoft.extensions.configuration.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.0.3\\microsoft.extensions.configuration.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.0.3\\microsoft.extensions.configuration.binder.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.0.3\\microsoft.extensions.dependencyinjection.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.3\\microsoft.extensions.dependencyinjection.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.logging\\3.0.3\\microsoft.extensions.logging.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.options\\3.0.3\\microsoft.extensions.options.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.3\\microsoft.extensions.primitives.3.0.3.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\system.collections.immutable\\1.6.0\\system.collections.immutable.1.6.0.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\system.componentmodel.annotations\\4.6.0\\system.componentmodel.annotations.4.6.0.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+  ],
   "logs": []
 }
