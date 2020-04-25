@@ -41,7 +41,7 @@ namespace PortalRandkowy.API.Controllers
             return StatusCode(201);
         }
 
-        [HttpPost]
+        [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
             User userFormRepo = await respository.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
