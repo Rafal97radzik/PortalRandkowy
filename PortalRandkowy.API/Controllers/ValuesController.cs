@@ -23,6 +23,7 @@ namespace PortalRandkowy.API.Controllers
             this.context = context;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Value>>> GetValues()
         {
@@ -31,7 +32,6 @@ namespace PortalRandkowy.API.Controllers
             return values;
         }
 
-        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<Value>> GetValue(int id)
         {
