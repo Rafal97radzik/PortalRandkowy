@@ -12,5 +12,7 @@ namespace PortalRandkowy.API.Models
         public string Descriptio { get; set; }
         public DateTime DateAdded { get; set; }
         public bool IsMain { get; set; }
+        public User User { get; set; }
+        public int UserId { get; set; }
     }
 }
