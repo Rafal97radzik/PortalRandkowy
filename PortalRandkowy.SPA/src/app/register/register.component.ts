@@ -7,6 +7,7 @@ import { AlertifyService } from '../_services/alertify.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent implements OnInit {
 
   @Output() cancelRegister = new EventEmitter();
