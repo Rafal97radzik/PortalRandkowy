@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "dMTKOllTsq0sIbDpYmDVj0+WPaSvIBrjfllt6lHTr8tkAXcCLWEW9SroTHh3NpqeK6Kauhfe119Qwe4ckZGKUA==",
+  "dgSpecHash": "1dxMxg7kPi7H9E0+D8fA1ddzFgTEF0v803GZ88TXp710Be/z0FbddeoZAJLRNbCs5YVEIx7ZHyboSennBaNAew==",
   "success": true,
   "projectFilePath": "D:\\Games\\angular\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Rikor\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\Rikor\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.3\\microsoft.aspnetcore.authentication.jwtbearer.3.1.3.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Rikor\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.3\\microsoft.aspnetcore.jsonpatch.3.1.3.nupkg.sha512",

@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
@@ -22,6 +21,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Newtonsoft.Json;
+using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
+using PortalRandkowy.API.Helpers;
 
 namespace PortalRandkowy.API
 {
@@ -43,6 +45,7 @@ namespace PortalRandkowy.API
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             });
             services.AddCors();
+            services.AddAutoMapper(typeof(AutoMapperProfiles));
             services.AddTransient<Seed>();
             services.AddScoped<IAuthRespository, AuthRespository>();
             services.AddScoped<IGenericRepository, GenericRepository>();

@@ -39,7 +39,7 @@ namespace PortalRandkowy.API.DTOs
         public string MakesMeLaugh { get; set; }
         public string ItFeelsBestIn { get; set; }
         public string FriendsWouldDescribeMe { get; set; }
-        public ICollection<Photo> Photos { get; set; }
+        public ICollection<PhotosForDetailedDto> Photos { get; set; }
         public string PhotoUrl { get; set; }
     }
 }
