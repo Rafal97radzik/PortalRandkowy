@@ -71,8 +71,8 @@ namespace PortalRandkowy.API
                 app.UseDeveloperExceptionPage();
             }
 
-            seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            seeder.SeedUsers();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();

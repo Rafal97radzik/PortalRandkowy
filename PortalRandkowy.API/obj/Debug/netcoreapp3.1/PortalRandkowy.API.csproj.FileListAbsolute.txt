@@ -127,3 +127,5 @@ D:\Games\angular\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\Micro
 D:\Games\angular\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\Games\angular\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\Games\angular\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Games\angular\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.csproj.CoreCompileInputs.cache
+D:\Games\angular\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.MvcApplicationPartsAssemblyInfo.cache
