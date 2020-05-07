@@ -51,16 +51,15 @@ namespace PortalRandkowy.API
             services.AddScoped<IGenericRepository, GenericRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(Options =>
-                {
-                    Options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
-                        ValidateIssuer=false,
-                        ValidateAudience=false
-                    };
-                });
+                        .AddJwtBearer(options =>{
+                            options.TokenValidationParameters = new TokenValidationParameters
+                            {
+                                ValidateIssuerSigningKey = true,
+                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                                ValidateIssuer = false,
+                                ValidateAudience = false
+                            };
+                        });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,12 +70,12 @@ namespace PortalRandkowy.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             seeder.SeedUsers();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
-            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
