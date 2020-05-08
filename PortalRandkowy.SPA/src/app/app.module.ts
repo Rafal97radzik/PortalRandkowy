@@ -14,6 +14,7 @@ import { UserListComponent } from './users/user-list/user-list.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { Router, RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
+import { AuthGuard } from './_guards/auth.guard';
 
 @NgModule({
    declarations: [
@@ -39,7 +40,8 @@ import { appRoutes } from './routes';
    providers: [
       AuthService,
       AlertifyService,
-      UserService
+      UserService,
+      AuthGuard
    ],
    bootstrap: [
       AppComponent
