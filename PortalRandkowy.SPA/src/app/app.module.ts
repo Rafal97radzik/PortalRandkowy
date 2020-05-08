@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -29,6 +31,8 @@ import { AuthGuard } from './_guards/auth.guard';
       HttpClientModule,
       FormsModule,
       RouterModule.forRoot(appRoutes),
+      BrowserAnimationsModule,
+      BsDropdownModule.forRoot(),
       JwtModule.forRoot({
          config: {
             tokenGetter: () => localStorage.getItem('token'),
