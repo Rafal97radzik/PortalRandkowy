@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
 <div class="container">
 
   <a class="navbar-brand" [routerLink]="['/home']">Portal Randkowy</a>
@@ -23,7 +23,7 @@
       <div class="dropdown-menu mt-2" *dropdownMenu>
         <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Edytuj profil</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i>Wyloguj</a>
+        <a class="dropdown-item" (click)="logout()"><i class="fa fa-sign-out"></i>Wyloguj</a>
       </div>
     </div>
 
