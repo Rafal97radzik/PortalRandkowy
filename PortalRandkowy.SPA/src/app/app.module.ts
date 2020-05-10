@@ -17,6 +17,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { Router, RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 @NgModule({
    declarations: [
@@ -45,7 +46,8 @@ import { AuthGuard } from './_guards/auth.guard';
       AuthService,
       AlertifyService,
       UserService,
-      AuthGuard
+      AuthGuard,
+      ErrorInterceptorProvider
    ],
    bootstrap: [
       AppComponent
