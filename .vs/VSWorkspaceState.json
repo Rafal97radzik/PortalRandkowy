@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PortalRandkowy.API",
+    "\\PortalRandkowy.API\\Controllers",
+    "\\PortalRandkowy.SPA",
+    "\\PortalRandkowy.SPA\\src",
+    "\\PortalRandkowy.SPA\\src\\app",
+    "\\PortalRandkowy.SPA\\src\\app\\_services"
   ],
+  "SelectedNode": "\\PortalRandkowy.API\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }

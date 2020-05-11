@@ -18,6 +18,7 @@ import { Router, RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
+import { UserCartComponent } from './users/user-cart/user-cart.component';
 
 @NgModule({
    declarations: [
@@ -25,7 +26,8 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
       NavComponent,
       HomeComponent,
       RegisterComponent,
-      UserListComponent
+      UserListComponent,
+      UserCartComponent
    ],
    imports: [
       BrowserModule,
