@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -19,6 +20,7 @@ import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { UserCartComponent } from './users/user-cart/user-cart.component';
+import { UserDetailComponent } from './users/user-detail/user-detail.component';
 
 @NgModule({
    declarations: [
@@ -27,7 +29,8 @@ import { UserCartComponent } from './users/user-cart/user-cart.component';
       HomeComponent,
       RegisterComponent,
       UserListComponent,
-      UserCartComponent
+      UserCartComponent,
+      UserDetailComponent
    ],
    imports: [
       BrowserModule,
@@ -36,6 +39,7 @@ import { UserCartComponent } from './users/user-cart/user-cart.component';
       RouterModule.forRoot(appRoutes),
       BrowserAnimationsModule,
       BsDropdownModule.forRoot(),
+      TabsModule.forRoot(),
       JwtModule.forRoot({
          config: {
             tokenGetter: () => localStorage.getItem('token'),
