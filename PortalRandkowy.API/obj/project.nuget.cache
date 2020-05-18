@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1dxMxg7kPi7H9E0+D8fA1ddzFgTEF0v803GZ88TXp710Be/z0FbddeoZAJLRNbCs5YVEIx7ZHyboSennBaNAew==",
+  "dgSpecHash": "MpKp70e8jQgE8shRzv6woogg+KyI3dFhgQFByzybXCWQHT7eosHalo9eZXqBrxbum11TeDLQp0V7GOjdZtDXtg==",
   "success": true,
-  "projectFilePath": "D:\\Games\\angular\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj",
+  "projectFilePath": "D:\\Games\\angular_apps\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rikor\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\Rikor\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

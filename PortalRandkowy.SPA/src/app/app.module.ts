@@ -23,6 +23,8 @@ import { UserCartComponent } from './users/user-cart/user-cart.component';
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
 import { UserDetailResolver } from './_resolvers/user-detail.resolver';
 import { UserListResolver } from './_resolvers/user-list.resolver';
+import { UserEditComponent } from './users/user-edit/user-edit.component';
+import { UserEditResolver } from './_resolvers/user-edit.resolver';
 
 @NgModule({
    declarations: [
@@ -32,7 +34,8 @@ import { UserListResolver } from './_resolvers/user-list.resolver';
       RegisterComponent,
       UserListComponent,
       UserCartComponent,
-      UserDetailComponent
+      UserDetailComponent,
+      UserEditComponent
    ],
    imports: [
       BrowserModule,
@@ -57,7 +60,8 @@ import { UserListResolver } from './_resolvers/user-list.resolver';
       AuthGuard,
       ErrorInterceptorProvider,
       UserDetailResolver,
-      UserListResolver
+      UserListResolver,
+      UserEditResolver
    ],
    bootstrap: [
       AppComponent

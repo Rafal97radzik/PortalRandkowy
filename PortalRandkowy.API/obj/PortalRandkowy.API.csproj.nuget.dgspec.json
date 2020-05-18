@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Games\\angular\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj": {}
+    "D:\\Games\\angular_apps\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj": {}
   },
   "projects": {
-    "D:\\Games\\angular\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj": {
+    "D:\\Games\\angular_apps\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Games\\angular\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj",
+        "projectUniqueName": "D:\\Games\\angular_apps\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj",
         "projectName": "PortalRandkowy.API",
-        "projectPath": "D:\\Games\\angular\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj",
+        "projectPath": "D:\\Games\\angular_apps\\PortalRandkowy\\PortalRandkowy.API\\PortalRandkowy.API.csproj",
         "packagesPath": "C:\\Users\\Rikor\\.nuget\\packages\\",
-        "outputPath": "D:\\Games\\angular\\PortalRandkowy\\PortalRandkowy.API\\obj\\",
+        "outputPath": "D:\\Games\\angular_apps\\PortalRandkowy\\PortalRandkowy.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\",
