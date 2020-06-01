@@ -45,7 +45,7 @@ namespace PortalRandkowy.API.Migrations
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "EeColor",
+                name: "EyeColor",
                 table: "Users",
                 nullable: true);
 

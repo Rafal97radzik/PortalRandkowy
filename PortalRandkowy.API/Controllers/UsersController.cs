@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -42,6 +43,25 @@ namespace PortalRandkowy.API.Controllers
             var userForReturn = mapper.Map<UserForDetailedDto>(user);
 
             return Ok(userForReturn);
+        }
+
+        [HttpPut("id")]
+        public async Task<IActionResult> UpdateUser(int id, UserForUpdateDto userForUpdateDto)
+        {
+            if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var userFromRepo = await repository.GetUser(id);
+            mapper.Map(userForUpdateDto, userFromRepo);
+
+            if(await repository.SaveAll())
+            {
+                return NoContent();
+            }
+            else
+            {
+                throw new Exception($"Aktualizacja użytkownika o id: {id} nie powiodła się przy zapisywaniu do bazy");
+            }
         }
     }
 }

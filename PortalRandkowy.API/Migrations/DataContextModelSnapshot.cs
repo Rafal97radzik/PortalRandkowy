@@ -71,7 +71,7 @@ namespace PortalRandkowy.API.Migrations
                     b.Property<string>("Education")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("EeColor")
+                    b.Property<string>("EyeColor")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FreeTime")
