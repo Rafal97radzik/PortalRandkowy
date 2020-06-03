@@ -45,6 +45,7 @@ namespace PortalRandkowy.API
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             });
             services.AddCors();
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper(typeof(AutoMapperProfiles));
             services.AddTransient<Seed>();
             services.AddScoped<IAuthRespository, AuthRespository>();

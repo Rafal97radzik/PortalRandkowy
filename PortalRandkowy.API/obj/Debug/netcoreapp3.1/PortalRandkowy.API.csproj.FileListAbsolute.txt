@@ -249,8 +249,6 @@ D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\
 D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.csprojAssemblyReference.cache
-D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.csproj.CoreCompileInputs.cache
-D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.MvcApplicationPartsAssemblyInfo.cache
 D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.AssemblyInfoInputs.cache
 D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.AssemblyInfo.cs
 D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.RazorTargetAssemblyInfo.cache
@@ -260,3 +258,6 @@ D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\
 D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.dll
 D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.pdb
 D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.genruntimeconfig.cache
+D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll
+D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.csproj.CoreCompileInputs.cache
+D:\Games\angular_apps\PortalRandkowy\PortalRandkowy.API\obj\Debug\netcoreapp3.1\PortalRandkowy.API.MvcApplicationPartsAssemblyInfo.cache
