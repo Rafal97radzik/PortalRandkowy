@@ -26,6 +26,7 @@ import { UserListResolver } from './_resolvers/user-list.resolver';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { UserEditResolver } from './_resolvers/user-edit.resolver';
 import { PreventUnsavesChanges } from './_guards/prevent-unsaved-changes.guard';
+import { PhotosComponent } from './users/photos/photos.component';
 
 @NgModule({
    declarations: [
@@ -36,7 +37,8 @@ import { PreventUnsavesChanges } from './_guards/prevent-unsaved-changes.guard';
       UserListComponent,
       UserCartComponent,
       UserDetailComponent,
-      UserEditComponent
+      UserEditComponent,
+      PhotosComponent
    ],
    imports: [
       BrowserModule,
