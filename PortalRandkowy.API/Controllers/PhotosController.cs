@@ -80,7 +80,7 @@ namespace PortalRandkowy.API.Controllers
             if (await repository.SaveAll())
             {
                 var photoToReturn = mapper.Map<PhotoForReturnDto>(photo);
-                return CreatedAtRoute("GetPhoto", new { id = photo.Id }, photoToReturn);
+                return Ok(photoToReturn);
             }
 
             return BadRequest("Nie można dodać zdjęcia");
