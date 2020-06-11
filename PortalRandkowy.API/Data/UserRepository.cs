@@ -16,6 +16,12 @@ namespace PortalRandkowy.API.Data
             this.context = context;
         }
 
+        public async Task<Photo> GetMainPhotoForUser(int userId)
+        {
+            var photo = await context.Photos.Where(p => p.UserId == userId).FirstOrDefaultAsync(p => p.IsMain);
+            return photo;
+        }
+
         public async Task<Photo> GetPhoto(int id)
         {
             var photo = await context.Photos.FirstOrDefaultAsync(p => p.Id == id);

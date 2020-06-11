@@ -95,5 +95,31 @@ namespace PortalRandkowy.API.Controllers
 
             return Ok(photoForReturn);
         }
+
+        [HttpPost("{id}/setMain")]
+        public async Task<IActionResult> SetMainPhoto(int userId, int id)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var user = await repository.GetUser(userId);
+
+            if (!user.Photos.Any(p => p.Id == id))
+                return Unauthorized();
+
+            var photoFromRepo = await repository.GetPhoto(id);
+
+            if (photoFromRepo.IsMain)
+                return BadRequest("To już jest główne zdjęcie");
+
+            var currentMainPhoto = await repository.GetMainPhotoForUser(userId);
+            currentMainPhoto.IsMain = false;
+            photoFromRepo.IsMain = true;
+
+            if (await repository.SaveAll())
+                return NoContent();
+
+            return BadRequest("Nie można ustawić zdjęcia jako głównego");
+        }
     }
 }
