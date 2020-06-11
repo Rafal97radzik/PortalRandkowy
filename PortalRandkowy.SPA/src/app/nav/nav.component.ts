@@ -10,14 +10,14 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-model: any = {};
+  model: any = {};
 
   constructor(public authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  login(){
+  login() {
     this.authService.login(this.model).subscribe(next => {
       this.alertify.success('Zalogowałeś się do aplikacji');
     }, error => {
@@ -33,6 +33,9 @@ model: any = {};
 
   logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    this.authService.currentUser = null;
+    this.authService.decodedToken = null;
     this.alertify.message('Zostałęś wylogowany');
     this.router.navigate(['/home']);
   }
