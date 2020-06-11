@@ -121,5 +121,35 @@ namespace PortalRandkowy.API.Controllers
 
             return BadRequest("Nie można ustawić zdjęcia jako głównego");
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePhoto(int userId, int id)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var user = await repository.GetUser(userId);
+
+            if (!user.Photos.Any(p => p.Id == id))
+                return Unauthorized();
+
+            var photoFromRepo = await repository.GetPhoto(id);
+
+            if (photoFromRepo.IsMain)
+                return BadRequest("Nie można usunąć zdjęcia głównego");
+
+            var deleteParams = new DeletionParams(photoFromRepo.public_id);
+            var result = cloudinary.Destroy(deleteParams);
+
+            if (result.Result == "ok")
+            {
+                repository.Delete(photoFromRepo);
+
+                if (await repository.SaveAll())
+                    return Ok();
+            }
+
+            return BadRequest("nie udało się usunąć zdjęcia");
+        }
     }
 }

@@ -31,9 +31,22 @@ export class PhotosComponent implements OnInit {
       this.currentMain = this.photos.filter(p => p.isMain === true)[0];
       this.currentMain.isMain = false;
       photo.isMain = true;
-      this.getUserPhotoChange.emit(photo.url);
+      this.authService.changeUserPhoto(photo.url);
+      this.authService.currentUser.photoUrl = photo.url;
+      localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
     }, error => {
       this.alertify.error(error);
+    });
+  }
+
+  deletePhoto(id: number) {
+    this.alertify.confirm('Czy jesteś pewien, że chcesz usunąć zdjęcie?', () => {
+      this.userService.deletePhoto(this.authService.decodedToken.nameid, id).subscribe(() => {
+        this.photos.splice(this.photos.findIndex(p => p.id === id), 1);
+        this.alertify.success('Zdjęcie zostało usunięte');
+      }, error => {
+        this.alertify.error('Nie udało się usunąć zdjęcia');
+      });
     });
   }
 
