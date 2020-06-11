@@ -144,7 +144,7 @@
             </tab>
             <tab heading="Zdjęcia">
               <div class="m-5">
-                <app-photos [photos]="user.photos"></app-photos>
+                <app-photos [photos]="user.photos" (getUserPhotoChange)="updateMainPhoto($event)"></app-photos>
               </div>
             </tab>
           </tabset>
