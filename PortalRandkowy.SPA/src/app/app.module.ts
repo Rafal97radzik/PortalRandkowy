@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { FileUploadModule } from 'ng2-file-upload';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -46,11 +47,12 @@ import { PhotosComponent } from './users/photos/photos.component';
       HttpClientModule,
       FormsModule,
       ReactiveFormsModule,
-      RouterModule.forRoot(appRoutes),
+      FileUploadModule,
       BrowserAnimationsModule,
+      RouterModule.forRoot(appRoutes),
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
-      FileUploadModule,
+      BsDatepickerModule.forRoot(),
       JwtModule.forRoot({
          config: {
             tokenGetter: () => localStorage.getItem('token'),

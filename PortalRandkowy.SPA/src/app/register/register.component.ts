@@ -1,7 +1,7 @@
 import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import { AlertifyService } from '../_services/alertify.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -15,17 +15,26 @@ export class RegisterComponent implements OnInit {
   model: any = {};
   registerForm: FormGroup;
 
-  constructor(private authService: AuthService, private alertify: AlertifyService) { }
+  constructor(private authService: AuthService, private alertify: AlertifyService, private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.registerForm = new FormGroup({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(10)]),
-      confirmPassword: new FormControl('', Validators.required)
-    }, this.passwordmatchValidator);
+    this.createRegisterForm();
   }
 
-  passwordmatchValidator(fg: FormControl){
+  createRegisterForm() {
+    this.registerForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(10)]],
+      confirmPassword: ['', Validators.required],
+      gender: ['female'],
+      dateOfBirth: [null, Validators.required],
+      zodiacSign: ['', Validators.required],
+      city: ['', Validators.required],
+      country: ['', Validators.required]
+    }, {validator: this.passwordmatchValidator});
+  }
+
+  passwordmatchValidator(fg: FormControl) {
     return fg.get('password').value === fg.get('confirmPassword').value ? null : { mismatch: true };
   }
 
