@@ -36,7 +36,7 @@ namespace PortalRandkowy.API.Controllers
             userParams.UserId = currentUserId;
 
             if (string.IsNullOrEmpty(userParams.Gender))
-                userParams.Gender = userFromRepo.Gender == "mężczyzna" ? "kobieta" : "mężczyzna";
+                userParams.Gender = userFromRepo.Gender == "kobieta" ? "mężczyzna" : "kobieta";
 
             var users = await repository.GetUsers(userParams);
 

@@ -13,6 +13,23 @@ import { Pagination, PaginationResult } from 'src/app/_models/pagination';
 export class UserListComponent implements OnInit {
 
   users: User[];
+  user: User = JSON.parse(localStorage.getItem('user'));
+  genderList = [{ value: 'mężczyzna', display: 'Meżczyźni' },
+  { value: 'kobieta', display: 'Kobiety' }];
+  zodiacSignList = [{ value: 'Wszystkie', display: 'Wszystkie' },
+  { value: 'Baran', display: 'Baran' },
+  { value: 'Byk', display: 'Byk' },
+  { value: 'Bliźnięta', display: 'Bliźnięta' },
+  { value: 'Rak', display: 'Rak' },
+  { value: 'Lew', display: 'Lew' },
+  { value: 'Panna', display: 'Panna' },
+  { value: 'Waga', display: 'Waga' },
+  { value: 'Scorpion', display: 'Skorpion' },
+  { value: 'Strzelec', display: 'Strzelec' },
+  { value: 'Koziorożec', display: 'Koziorożec' },
+  { value: 'Wodnik', display: 'Wodnik' },
+  { value: 'Ryby', display: 'Ryby' }];
+  userParams: any = {};
   pagination: Pagination;
 
   constructor(private userService: UserService, private alertify: AlertifyService, private route: ActivatedRoute) { }
@@ -22,6 +39,19 @@ export class UserListComponent implements OnInit {
       this.users = data.users.result;
       this.pagination = data.users.pagination;
     });
+
+    this.userParams.gender = this.user.gender === 'kobieta' ? 'mężczyzna' : 'kobieta';
+    this.userParams.zodiacSign = 'Wszystkie';
+    this.userParams.minAge = 18;
+    this.userParams.maxAge = 100;
+  }
+
+  resetFilters() {
+    this.userParams.gender = this.user.gender === 'kobieta' ? 'mężczyzna' : 'kobieta';
+    this.userParams.zodiacSign = 'Wszystkie';
+    this.userParams.minAge = 18;
+    this.userParams.maxAge = 100;
+    this.loadUsers();
   }
 
   pageChanged(event: any): void {
@@ -30,12 +60,13 @@ export class UserListComponent implements OnInit {
   }
 
   loadUsers() {
-    this.userService.getUsers(this.pagination.currentPage, this.pagination.itemsPerPage).subscribe((res: PaginationResult<User[]>) => {
-      this.users = res.result;
-      this.pagination = res.pagination;
-    }, error => {
-      this.alertify.error(error);
-    });
+    this.userService.getUsers(this.pagination.currentPage, this.pagination.itemsPerPage, this.userParams)
+      .subscribe((res: PaginationResult<User[]>) => {
+        this.users = res.result;
+        this.pagination = res.pagination;
+      }, error => {
+        this.alertify.error(error);
+      });
   }
 
 }

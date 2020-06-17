@@ -51,7 +51,7 @@ namespace PortalRandkowy.API.Data
                 users = users.Where(u => u.DateOfBirth >= minDate && u.DateOfBirth <= maxDate);
             }
 
-            if (!string.IsNullOrEmpty(userParams.ZodiacSing))
+            if (userParams.ZodiacSing!= "Wszystkie")
             {
                 users = users.Where(u => u.ZodiacSing == userParams.ZodiacSing);
             }
