@@ -30,6 +30,7 @@ import { UserEditResolver } from './_resolvers/user-edit.resolver';
 import { PreventUnsavesChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotosComponent } from './users/photos/photos.component';
 import { TimeAgoPipe } from './_pipes/time-ago-pipe';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @NgModule({
    declarations: [
@@ -56,6 +57,7 @@ import { TimeAgoPipe } from './_pipes/time-ago-pipe';
       TabsModule.forRoot(),
       PaginationModule.forRoot(),
       BsDatepickerModule.forRoot(),
+      ButtonsModule.forRoot(),
       JwtModule.forRoot({
          config: {
             tokenGetter: () => localStorage.getItem('token'),
