@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using PortalRandkowy.API.Data;
 using PortalRandkowy.API.DTOs;
 using PortalRandkowy.API.Helpers;
+using PortalRandkowy.API.Models;
 
 namespace PortalRandkowy.API.Controllers
 {
@@ -74,6 +75,34 @@ namespace PortalRandkowy.API.Controllers
             {
                 throw new Exception($"Aktualizacja użytkownika o id: {id} nie powiodła się przy zapisywaniu do bazy");
             }
+        }
+
+        [HttpPost("{id}/like/{recipientId}")]
+        public async Task<IActionResult> LikeUser(int id, int recipientId)
+        {
+            if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var like = await repository.GetLike(id, recipientId);
+
+            if (like != null)
+                return BadRequest("Już lubisz tego użytkownika");
+
+            if (await repository.GetUser(recipientId) == null)
+                return NotFound();
+
+            like = new Like
+            {
+                UserLikesId = id,
+                UserIsLikedId = recipientId
+            };
+
+            repository.Add(like);
+
+            if (await repository.SaveAll())
+                return Ok();
+
+            return BadRequest("Nie można polubić użytkownika");
         }
     }
 }

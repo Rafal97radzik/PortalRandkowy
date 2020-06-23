@@ -18,6 +18,11 @@ namespace PortalRandkowy.API.Data
             this.context = context;
         }
 
+        public async Task<Like> GetLike(int userId, int recipientId)
+        {
+            return await context.Likes.FirstOrDefaultAsync(u => u.UserLikesId == userId && u.UserIsLikedId == recipientId);
+        }
+
         public async Task<Photo> GetMainPhotoForUser(int userId)
         {
             var photo = await context.Photos.Where(p => p.UserId == userId).FirstOrDefaultAsync(p => p.IsMain);
